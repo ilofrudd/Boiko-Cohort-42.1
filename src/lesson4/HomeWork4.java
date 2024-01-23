@@ -1,5 +1,9 @@
 package lesson4;
-
+/**
+ * AIT-TR, Java Basic, Cohort42.1, HW #3
+ * @Author Boiko Yaroslav
+ * @Version 23.01.24
+ */
 import java.util.Scanner;
 
 public class HomeWork4 {
