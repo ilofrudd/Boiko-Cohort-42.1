@@ -30,8 +30,16 @@ public class HomeWork5 {
 
         System.out.println("Enter a number (1, 2, or 3): ");
         int number = scanner.nextInt();
-        String[] words = {"invalid number", "one", "two", "three"};
-        String result = (number >= 1 && number <= 3) ? words[number] : words[0];
+        String result;
+        if (number == 1) {
+            result = "one";
+        } else if (number == 2) {
+            result = "two";
+        } else if (number == 3) {
+            result = "three";
+        } else {
+            result = "invalid number";
+        }
         System.out.println("You entered: " + result);
 
         //Ex.3
@@ -42,7 +50,16 @@ public class HomeWork5 {
         int num3 = random.nextInt(101);
         int num4 = random.nextInt(101);
         System.out.println("Generated numbers: " + num1 + ", " + num2 + ", " + num3 + ", " + num4 + ";");
-        int maxNum = Math.max(Math.max(num1, num2), Math.max(num3, num4));
+        int maxNum = num1;
+        if (num2 > maxNum) {
+            maxNum = num2;
+        }
+        if (num3 > maxNum) {
+            maxNum = num3;
+        }
+        if (num4 > maxNum) {
+            maxNum = num4;
+        }
         System.out.println("The MAX number is: " + maxNum);
 
         //Ex.4
