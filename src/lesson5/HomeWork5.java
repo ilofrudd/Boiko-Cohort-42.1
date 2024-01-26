@@ -70,15 +70,15 @@ public class HomeWork5 {
         if (s.length() != 4) {
             System.out.println("Error: Please enter a four-digit number.");
             System.exit(1);
-            }
-            int number1 = s.charAt(0) - '0';
-            int number2 = s.charAt(1) - '0';
-            int number3 = s.charAt(2) - '0';
-            int number4 = s.charAt(3) - '0';
-            boolean luckyT = (number1 + number2) == (number3 + number4);
-            if (luckyT) {
+        }
+        int number1 = s.charAt(0) - '0';
+        int number2 = s.charAt(1) - '0';
+        int number3 = s.charAt(2) - '0';
+        int number4 = s.charAt(3) - '0';
+        boolean luckyT = (number1 + number2) == (number3 + number4);
+        if (luckyT) {
                 System.out.println("Congratulations! It's a lucky ticket.");
-            } else {
+        } else {
                 System.out.println("Sorry, not a lucky ticket.");
             }
     }
