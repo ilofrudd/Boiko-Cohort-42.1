@@ -2,7 +2,11 @@ package lesson7;
 
 import java.util.Random;
 import java.util.Scanner;
-
+/**
+ * AIT-TR, Java Basic, Cohort42.1, HW #7
+ * @author Boiko Yaroslav
+ * @version 31.01.24
+ */
 public class HomeWork7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
