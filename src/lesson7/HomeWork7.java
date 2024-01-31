@@ -13,7 +13,7 @@ public class HomeWork7 {
         Random random = new Random();
         do {
             double g = 9.81;
-            double dist = random.nextInt(1000);
+            double dist = random.nextInt(1000) + 200;
             int attempts = 0;
             double speed;
             double angle;
