@@ -25,7 +25,7 @@ public class HomeWork7 {
                 speed = scanner.nextDouble();
                 System.out.println("Enter the launch angle (degrees) [0...,89]: ");
                 angle = scanner.nextDouble();
-                range = (speed * speed) * Math.sin(2 * Math.toRadians(angle)) / g;
+                range = (speed * speed) * Math.sin(Math.toRadians(angle * 2)) / g;
                 if (Math.abs(dist - range) <= blastRadius) {
                     System.out.println("Target hit, nice shot! Distance: " + dist + "m");
                     break;
