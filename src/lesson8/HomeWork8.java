@@ -34,7 +34,7 @@ public class HomeWork8 {
 
         System.out.println();
         System.out.print("Ex. #3");
-        String[] words = {"Red", "Orange", "Yellow", "Green", "Blue", "Magenta"};
+        String[] words = {"Kyiv", "Berlin", "Gronau", "London", "Madrid", "Zaporizhia"};
         int maxLength = 0;
         String longestWord = "";
         for (String word : words) {
