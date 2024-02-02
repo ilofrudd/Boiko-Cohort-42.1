@@ -50,7 +50,7 @@ public class HomeWork8 {
             System.out.println(c);
         }
 
-        // task #4
+        // Ex. #4
 
         System.out.println("Ex. #4");
         int[] numbs = new int[10];
@@ -89,7 +89,7 @@ public class HomeWork8 {
         }
         System.out.println("Avg is: " + average);
 
-        // task #5
+        // Ex. #5
 
         System.out.println("Ex. #5");
         Scanner scanner = new Scanner(System.in);
