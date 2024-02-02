@@ -11,17 +11,17 @@ import java.util.Scanner;
 public class HomeWork8 {
     public static void main(String[] args) {
 
-        // task #1
+        // Ex. #1
 
-        System.out.println("---task #1---");
+        System.out.println("Ex. #1");
         for (int i = 1; i < 11; i++) {
             System.out.println("Task" + i);
         }
 
-        // task #2
+        // Ex. #2
 
-        System.out.println("---task #2---");
-        int[] array = {10, 14, 15, 33, 70, 55, 44, 1, -10, 85, 42, 18, 20, 31, 61, 62, 75, 90, -25, 95};
+        System.out.println("Ex. #2");
+        int[] array = {1, 18, 75, 22, 70, 55, 44, 11, -10, 98, 45, 18, 20, 21, 91, 62, 75, 90, -25, 100};
         System.out.print(Arrays.toString(array));
         System.out.print("\nArray numbers multiples of 5:\n");
         for (int i : array) {
@@ -30,10 +30,10 @@ public class HomeWork8 {
             }
         }
 
-        // task #3
+        // Ex. #3
 
         System.out.println();
-        System.out.print("---task #3---");
+        System.out.print("Ex. #3");
         String[] words = {"Red", "Orange", "Yellow", "Green", "Blue", "Magenta"};
         int maxLength = 0;
         String longestWord = "";
@@ -52,7 +52,7 @@ public class HomeWork8 {
 
         // task #4
 
-        System.out.println("---task #4---");
+        System.out.println("Ex. #4");
         int[] numbs = new int[10];
         Random num = new Random();
         for (int i = 0; i < numbs.length; i++) {
@@ -91,7 +91,7 @@ public class HomeWork8 {
 
         // task #5
 
-        System.out.println("---task #5---");
+        System.out.println("Ex. #5");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter expression, like 16+23-1+8 ( :/*/-/+ ):");
         String exp = scanner.next();
