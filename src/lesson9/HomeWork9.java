@@ -11,18 +11,34 @@ import java.util.Scanner;
 public class HomeWork9 {
     public static void main(String[] args) {
         Random random = new Random();
+
+        //Task 1
+
         task1(5);
         int arr[] = new int[10];
+        //Massive
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(100);
         }
+
+        //Task 2
+
         printArray(arr);
+
+        //Task 3
+
         printArray(arr, true);
         printArray(arr, false);
+
+        //Task 4
+
         double[] resultTask4 = task4(arr);
         double min = resultTask4[0];
         double max = resultTask4[1];
         double average = resultTask4[2];
+
+        //Task 5
+
         System.out.println("Max: " + max + "; " + "Min: " + min + "; " + "Average: " + average + "; ");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter expression, like 16+23-1+8 ( :/*/-/+ ):");
@@ -45,13 +61,6 @@ public class HomeWork9 {
 
     //array output
     static void printArray(int[] a) {
-        for (int i : a) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-
-        // reverse array output
-
         for (int i = a.length - 1; i >= 0; i--) {
             System.out.print(a[i] + " ");
         }
