@@ -15,8 +15,9 @@ public class HomeWork9 {
         //Task 1
 
         task1(5);
-        int arr[] = new int[10];
         //Massive
+
+        int arr[] = new int[10];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = random.nextInt(100);
         }
@@ -43,7 +44,7 @@ public class HomeWork9 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter expression, like 16+23-1+8 ( :/*/-/+ ):");
         String exp = scanner.next();
-        String[] tokens = tokenizeExpression(exp, scanner);
+        String[] tokens = tokenizeExpression(exp);
         System.out.println("Tokens: " + Arrays.toString(tokens));
         int result = evaluateExpression(tokens);
         System.out.println("Result: " + result);
@@ -102,7 +103,7 @@ public class HomeWork9 {
     }
 
     //task 5
-    static String[] tokenizeExpression(String exp, Scanner scanner) {
+    static String[] tokenizeExpression(String exp) {
         String[] tokens = new String[10];
         int idx = 0;
         String number = "";
