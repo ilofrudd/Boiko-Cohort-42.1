@@ -83,9 +83,9 @@ public class TicTacToe {
     static void turnAI() {
          int x, y;
         do {
-           x = random.nextInt(3);
-           y = random.nextInt(3);
-         } while(!isCellValid(x, y));
+            x = random.nextInt(3);
+            y = random.nextInt(3);
+        } while(!isCellValid(x, y));
         table[y][x] = CHAR_O;
     }
 
