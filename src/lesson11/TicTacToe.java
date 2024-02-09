@@ -81,7 +81,7 @@ public class TicTacToe {
     }
 
     static void turnAI() {
-         int x, y;
+        int x, y;
         do {
             x = random.nextInt(3);
             y = random.nextInt(3);
