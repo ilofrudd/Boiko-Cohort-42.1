@@ -106,9 +106,11 @@ public class TicTacToe {
 
         // diagonals
         if (table[0][0] == chr && table[1][1] == chr && table[2][2] == chr) {
-            return true;}
+            return true;
+        }
         if (table[0][2] == chr && table[1][1] == chr && table[2][0] == chr) {
-            return true;}
+            return true;
+        }
         return false;
     }
 
