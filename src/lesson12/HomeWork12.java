@@ -2,6 +2,10 @@ package lesson12;
 
 import java.util.Random;
 import java.util.Arrays;
+/**
+ * AIT-TR, Java Basic, Cohort42.1, HW#12
+ * @version 12.02.24
+ */
 public class HomeWork12 {
     public static void main(String[] args) {
         int[] array = generateRandomArray(10, 1, 100);

@@ -1,7 +1,11 @@
 package lesson12;
 
 import java.util.Arrays;
-
+/**
+ * AIT-TR, Java Basic, Cohort42.1, Lesson#12
+ * @author Boiko Yaroslav
+ * @version 09.02.24
+ */
 public class Lesson12 {
     public static void main(String[] args) {
         int[] array = {1, 8, 12, -4, 6, 3, 7, -13};
