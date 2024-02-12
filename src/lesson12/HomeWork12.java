@@ -42,7 +42,7 @@ public class HomeWork12 {
 
     }
 
-    static int[] generateRandomArray(int size, int min, int max) {
+    public static int[] generateRandomArray(int size, int min, int max) {
         int[] array = new int[size];
         Random random = new Random();
         for (int i = 0; i < size; i++) {
@@ -50,7 +50,7 @@ public class HomeWork12 {
         }
         return array;
     }
-    static int linearSearchMin(int[] array) {
+    public static int linearSearchMin(int[] array) {
         int minIdx = 0;
         for (int i = 1; i < array.length; i++) {
             if (array[i] < array[minIdx]) {
@@ -59,7 +59,7 @@ public class HomeWork12 {
         }
         return minIdx;
     }
-    static void selectionSort(int[] array) {
+    public static void selectionSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int min = array[i + 1];
             int minIdx = i + 1;
@@ -76,7 +76,7 @@ public class HomeWork12 {
             }
         }
     }
-    static int binarySearchMax(int[] array) {
+    public static int binarySearchMax(int[] array) {
         int left = 0;
         int right = array.length - 1;
         while (left < right) {
