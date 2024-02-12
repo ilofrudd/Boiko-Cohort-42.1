@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * AIT-TR, Java Basic, Cohort42.1, Lesson#12
  * @author Boiko Yaroslav
- * @version 09.02.24
+ * @version 12.02.24
  */
 public class Stack {
     static int[] stack = new int[10];
@@ -18,7 +18,6 @@ public class Stack {
             throw new RuntimeException("Stack overflow");
         }
     }
-
     public static Integer pop () {
         if (idx > 1) {
             idx--;
