@@ -3,7 +3,7 @@ package lesson12;
 import java.util.Random;
 import java.util.Arrays;
 /**
- * AIT-TR, Java Basic, Cohort42.1, Lesson#12
+ * AIT-TR, Java Basic, Cohort42.1, HW#12
  * @author Boiko Yaroslav
  * @version 12.02.24
  */
@@ -13,6 +13,7 @@ public class HomeWork12 {
         System.out.println("Massive: " + Arrays.toString(array));
 
         //Task1
+
         System.out.println(" |Task1| ");
         int minPosition = linearSearchMin(array);
         System.out.println("Min element minPosition  " + minPosition);
@@ -30,6 +31,7 @@ public class HomeWork12 {
         System.out.println("Max element position (binary search): " + maxPosition);
 
         //Task4
+
         System.out.println(" |Task4| ");
         Stack.push(15);
         Stack.push(7);
