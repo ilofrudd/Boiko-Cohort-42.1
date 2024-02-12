@@ -3,7 +3,8 @@ package lesson12;
 import java.util.Random;
 import java.util.Arrays;
 /**
- * AIT-TR, Java Basic, Cohort42.1, HW#12
+ * AIT-TR, Java Basic, Cohort42.1, Lesson#12
+ * @author Boiko Yaroslav
  * @version 12.02.24
  */
 public class HomeWork12 {
@@ -27,7 +28,18 @@ public class HomeWork12 {
         System.out.println(" |Task3| ");
         int maxPosition = binarySearchMax(array);
         System.out.println("Max element position (binary search): " + maxPosition);
+
+        //Task4
+
+        Stack.push(15);
+        Stack.push(7);
+        Stack.push(-5);
+        System.out.println(Stack.arrayToString());
+        System.out.println(Stack.pop());
+        System.out.println(Stack.arrayToString());
+
     }
+
     static int[] generateRandomArray(int size, int min, int max) {
         int[] array = new int[size];
         Random random = new Random();
