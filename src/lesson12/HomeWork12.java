@@ -30,7 +30,7 @@ public class HomeWork12 {
         System.out.println("Max element position (binary search): " + maxPosition);
 
         //Task4
-
+        System.out.println(" |Task4| ");
         Stack.push(15);
         Stack.push(7);
         Stack.push(-5);
