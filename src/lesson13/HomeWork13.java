@@ -9,9 +9,9 @@ import lesson12.HomeWork12;
  */
 public class HomeWork13 {
     public static void main(String[] args) {
-        // task #1
+        // Task #1
         long startTime = System.currentTimeMillis();
-        //int[] array = HomeWork12.createRandomArray(100_000, 100);
+        //int[] array = HomeWork12.createRandomArray(100_000, -100, 100);
         int[] array = HomeWork12.generateRandomArray(100_000_000, -100, 100);
         System.out.println((System.currentTimeMillis() - startTime) + " ms - create array");
 
