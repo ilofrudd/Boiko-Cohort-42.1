@@ -15,8 +15,8 @@ public class HomeWork12 {
         //Task1
 
         System.out.println(" |Task1| ");
-        int minPosition = linearSearchMin(array);
-        System.out.println("Min element minPosition  " + minPosition);
+        int minPosition = linearSearch(array);
+        System.out.println("Element Position  " + minPosition);
 
         //Task2
 
@@ -27,8 +27,8 @@ public class HomeWork12 {
         //Task3
 
         System.out.println(" |Task3| ");
-        int maxPosition = binarySearchMax(array);
-        System.out.println("Max element position (binary search): " + maxPosition);
+        int maxPosition = binarySearch(array);
+        System.out.println("Element position (binary search): " + maxPosition);
 
         //Task4
 
@@ -50,14 +50,13 @@ public class HomeWork12 {
         }
         return array;
     }
-    public static int linearSearchMin(int[] array) {
-        int minIdx = 0;
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] < array[minIdx]) {
-                minIdx = i;
+    public static int linearSearch(int[] a, int n) {
+        for (int i = 0; i < a.length; i++) {
+            if (a[i] == n) {
+                return i;
             }
         }
-        return minIdx;
+        return -1;
     }
     public static void selectionSort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
@@ -76,18 +75,20 @@ public class HomeWork12 {
             }
         }
     }
-    public static int binarySearchMax(int[] array) {
-        int left = 0;
-        int right = array.length - 1;
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            if (array[mid] > array[mid + 1]) {
-                right = mid;
+    public static int binarySearch(int[] a, int n) {
+        int left = 0, right = a.length - 1;
+        while (left + 1 != right) {
+            int middle = left + (right - left) / 2;
+            if (a[middle] == n) {
+                return middle;
+            }
+            if (a[middle] > n) {
+                right = middle;
             } else {
-                left = mid + 1;
+                left = middle;
             }
         }
-        return left;
+        return -1;
     }
 }
 

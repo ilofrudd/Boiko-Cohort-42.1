@@ -7,13 +7,13 @@ public class Lesson13 {
         int[] array = HomeWork12.generateRandomArray(1000000,-100,100);
 
         long startTime = System.currentTimeMillis();
-        System.out.println(HomeWork12.linearSearchMin(array));
+        System.out.println(HomeWork12.linearSearch(array, 45));
         System.out.println((System.currentTimeMillis() - startTime) + "ms");
 
         HomeWork12.selectionSort(array);
 
         startTime = System.currentTimeMillis();
-        System.out.println(HomeWork12.binarySearchMax(array));
+        System.out.println(HomeWork12.binarySearch(array, 45));
         System.out.println((System.currentTimeMillis() - startTime) + "ms");
     }
 }
