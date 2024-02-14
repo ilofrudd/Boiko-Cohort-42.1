@@ -16,7 +16,7 @@ public class HomeWork13 {
         System.out.println((System.currentTimeMillis() - startTime) + " ms - create array");
 
         startTime = System.currentTimeMillis();
-        HomeWork12.linearSearch(array, 45);
+        HomeWork12.linearSearch(array, 37);
         System.out.println((System.currentTimeMillis() - startTime) + " ms - linear search");
 
         startTime = System.currentTimeMillis();
@@ -24,7 +24,7 @@ public class HomeWork13 {
         System.out.println((System.currentTimeMillis() - startTime) + " ms - selection sort");
 
         startTime = System.currentTimeMillis();
-        HomeWork12.binarySearch(array, 45);
+        HomeWork12.binarySearch(array, 37);
         System.out.println((System.currentTimeMillis() - startTime) + " ms - binary search");
     }
 }
