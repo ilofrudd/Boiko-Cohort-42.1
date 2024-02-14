@@ -81,6 +81,25 @@ public class HomeWork6 {
         } while (true);
 
         //Ex.6
+       /* String expr = "34+8";
+        String n1 = "";
+        String n2 = "";
+        String s = "";
+        int p = 0;
+        while (p < expr.length()) {
+            char ch;
+           //  switch (ch) {
+              //  case '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' ->
+                 //   if (s.isEmpty()) {
+                   //     n1 += ch;
+                   // } else {
+                     //   n2 += ch;
+                   // }
+               // case '+', '-', '*', '/' -> s += ch;
+
+
+            }
+        } */
 
 
 

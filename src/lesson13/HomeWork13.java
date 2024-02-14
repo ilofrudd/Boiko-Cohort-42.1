@@ -5,7 +5,7 @@ import lesson12.HomeWork12;
 /**
  * AIT-TR, Java Basic, Cohort42.1, HW #13
  * @author Boiko Yaroslav
- * @version 2024-02-14
+ * @version 14.02.24
  */
 public class HomeWork13 {
     public static void main(String[] args) {
