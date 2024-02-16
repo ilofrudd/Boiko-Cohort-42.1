@@ -15,7 +15,7 @@ public class HomeWork12 {
         //Task1
 
         System.out.println(" |Task1| ");
-        int minPosition = linearSearch(array);
+        int minPosition = linearSearch(array, 45);
         System.out.println("Element Position  " + minPosition);
 
         //Task2
@@ -27,7 +27,7 @@ public class HomeWork12 {
         //Task3
 
         System.out.println(" |Task3| ");
-        int maxPosition = binarySearch(array);
+        int maxPosition = binarySearch(array, 45);
         System.out.println("Element position (binary search): " + maxPosition);
 
         //Task4
