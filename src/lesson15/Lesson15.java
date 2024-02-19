@@ -9,17 +9,20 @@ import java.util.Scanner;
  */
 public class Lesson15 {
     public static void main(String[] args) {
-        int a = 10;
-        Scanner scanner = new Scanner(System.in);
-        /* Cat cat = new Cat();//"Murzik", "White", 3);
+        Cat cat = new Cat("Mursik", "White", 3, 100);
         cat.voice();
-        System.out.println(cat.name + ", " + cat.color + ", " + cat.age);
-*/
-        System.out.println("The cat");
-        Cat cat1 = new Cat(scanner.next(), "Black", 5, 10);
+        System.out.println(cat.name +  ", " + cat.color + ", " + cat.age);
+        cat.eat(10);
+        System.out.println(cat.satiated());
+        System.out.println(cat.walk());
+        System.out.println();
+
+        Cat cat1 = new Cat("Barsik", "Black", 5, 100);
         cat1.voice();
-        System.out.println(cat1.name + ", " + cat1.color + ", " + cat1.age);
-        cat1.eat ( scanner.nextInt());
+        System.out.println(cat1.name +  ", " + cat1.color + ", " + "age " + cat1.age);
+        cat1.eat(80);
         System.out.println(cat1.satiated());
+        System.out.println(cat1.run());
     }
 }
+
