@@ -1,5 +1,6 @@
 package lesson15;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /**
@@ -21,7 +22,10 @@ public class HomeWork15 {
         fuel.drive(scanner.nextDouble());
         System.out.println("Required for travel (liters)");
         System.out.println(fuel.needFuel() + "l");
-
+        System.out.println("Enter the fuel price (EUR)");
+        fuel.fuelPrice(scanner.nextDouble());
+        System.out.println("Adventure price");
+        System.out.println(fuel.adventurePrice() + " EUR");
         //Task 2
         System.out.println("The Car");
         Car car = new Car(5, 50);

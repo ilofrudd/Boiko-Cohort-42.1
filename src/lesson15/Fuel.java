@@ -10,6 +10,7 @@ public class Fuel {
     String color;
    double fuelConsumption;
    double distance;
+   double price;
 
    public Fuel(String brand, String model, String color) {
       this.brand = brand;
@@ -26,6 +27,12 @@ public class Fuel {
 
    public double needFuel() {
        return fuelConsumption/100 * distance;
+   }
+   public void fuelPrice(double price) {
+       this.price = price;
+   }
+   public double adventurePrice() {
+       return needFuel() * price;
    }
 
 
