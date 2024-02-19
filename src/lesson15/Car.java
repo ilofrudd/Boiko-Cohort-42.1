@@ -1,5 +1,9 @@
 package lesson15;
-
+/**
+ * AIT-TR, Java Basic, Cohort42.1, HW #15
+ * @author Boiko Yaroslav
+ * @version 19.02.24
+ */
 public class Car {
     double fuel;
     double fuelVolume;
