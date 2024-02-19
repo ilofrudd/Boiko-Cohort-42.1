@@ -8,35 +8,30 @@ public class Adventure {
     String brand;
     String model;
     String color;
-   double fuelConsumption;
-   double distance;
-   double price;
+    double fuelConsumption;
+    double distance;
+    double price;
 
-   public Adventure(String brand, String model, String color) {
+    public Adventure(String brand, String model, String color) {
       this.brand = brand;
       this.model = model;
       this.color = color;
    }
 
-   public void averageFuelConsumption (double fuelConsumption) {
+    public void averageFuelConsumption (double fuelConsumption) {
        this.fuelConsumption = fuelConsumption;
    }
-   public void drive (double distance) {
+    public void drive (double distance) {
        this.distance = distance;
    }
 
-   public double needFuel() {
+    public double needFuel() {
        return fuelConsumption/100 * distance;
    }
-   public void fuelPrice(double price) {
+    public void fuelPrice(double price) {
        this.price = price;
    }
-   public double adventurePrice() {
+    public double adventurePrice() {
        return needFuel() * price;
    }
-
-
-
-
-
 }
