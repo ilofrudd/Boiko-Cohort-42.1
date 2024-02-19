@@ -7,13 +7,15 @@ public class Fuel {
    double fuelConsumption;
    double distance;
 
-   public Fuel(String brand, String model, String color, double fuelConsumption) {
+   public Fuel(String brand, String model, String color) {
       this.brand = brand;
       this.model = model;
       this.color = color;
-      this.fuelConsumption = fuelConsumption;
    }
 
+   public void averageFuelConsumption (double fuelConsumption) {
+       this.fuelConsumption = fuelConsumption;
+   }
    public void drive (double distance) {
        this.distance = distance;
    }

@@ -13,8 +13,10 @@ public class HomeWork15 {
         System.out.println("Fuel calculator");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your car");
-        Fuel fuel = new Fuel("Ford, ", "Focus", "Gray", 8.5);
-        System.out.println(fuel.brand + ", " + fuel.model + ", " + fuel.color);
+        Fuel fuel = new Fuel("Ford", "Focus", "Gray");
+        System.out.println("Car brand: " + fuel.brand + "; Car model: " + fuel.model + "; Car color: " + fuel.color);
+        System.out.println("Enter  fuel consumption per 100 km");
+        fuel.averageFuelConsumption(scanner.nextDouble());
         System.out.println("Enter the distance (km)");
         fuel.drive(scanner.nextDouble());
         System.out.println("Required for travel (liters)");
