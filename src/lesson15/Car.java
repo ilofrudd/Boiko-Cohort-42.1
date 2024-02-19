@@ -1,29 +1,33 @@
 package lesson15;
 
 public class Car {
-    String brand;
-    String model;
-    String color;
-   double fuelConsumption;
-   double distance;
+    double fuel;
+    double fuelVolume;
+    boolean engineON;
 
-   public Car(String brand, String model, String color,  double fuelConsumption) {
-      this.brand = brand;
-      this.model = model;
-      this.color = color;
-      this.fuelConsumption = fuelConsumption;
-   }
+    public Car(double fuel, double fuelVolume) {
+        this.fuel = fuel;
+        this.fuelVolume = fuelVolume;
+        this.engineON = false;
+    }
 
-   public void drive (double distance) {
-       this.distance = distance;
-   }
-
-   public double fuel() {
-       return fuelConsumption/100 * distance;
-   }
-
-
-
-
-
+    public void refuel(double fuel) {
+        if (this.fuel + fuel > fuelVolume) {
+           this.fuel = fuelVolume;
+            return;
+        }
+        this.fuel += fuel;
+    }
+    public double drive(int distance) {
+        if(!engineON) {
+            return 0;
+        }
+        // TODO recalcuate real distance  if fuel not enought
+        fuel -= 0.05 * distance;
+        return distance;
+    }
+    public boolean startEngine() {
+        engineON = fuel > 0;
+        return engineON;
+    }
 }

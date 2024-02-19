@@ -9,14 +9,24 @@ import java.util.Scanner;
  */
 public class HomeWork15 {
     public static void main(String[] args) {
+        //my idea
+        System.out.println("Fuel calculator");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your car");
-        Car car = new Car("Ford, ", "Focus", "Gray", 8.5);
-        System.out.println(car.brand + ", " + car.model + ", " + car.color);
+        Fuel fuel = new Fuel("Ford, ", "Focus", "Gray", 8.5);
+        System.out.println(fuel.brand + ", " + fuel.model + ", " + fuel.color);
         System.out.println("Enter the distance (km)");
-        car.drive(scanner.nextDouble());
+        fuel.drive(scanner.nextDouble());
         System.out.println("Required for travel (liters)");
-        System.out.println(car.fuel() + "l");
+        System.out.println(fuel.needFuel() + "l");
+
+        //Task 2
+        System.out.println("The Car");
+        Car car = new Car(5, 50);
+        if (car.startEngine()) {
+            System.out.println("Drive: " + car.drive(50));
+            System.out.println("Fuel: " + car.fuel);
+        }
     }
 
 }
