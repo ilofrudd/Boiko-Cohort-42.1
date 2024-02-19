@@ -1,6 +1,5 @@
 package lesson15;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 /**
@@ -14,18 +13,18 @@ public class HomeWork15 {
         System.out.println("Fuel calculator");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Your car");
-        Fuel fuel = new Fuel("Ford", "Focus", "Gray");
-        System.out.println("Car brand: " + fuel.brand + "; Car model: " + fuel.model + "; Car color: " + fuel.color);
+        Adventure adventure = new Adventure("Ford", "Focus", "Gray");
+        System.out.println("Car brand: " + adventure.brand + "; Car model: " + adventure.model + "; Car color: " + adventure.color);
         System.out.println("Enter  fuel consumption per 100 km");
-        fuel.averageFuelConsumption(scanner.nextDouble());
+        adventure.averageFuelConsumption(scanner.nextDouble());
         System.out.println("Enter the distance (km)");
-        fuel.drive(scanner.nextDouble());
+        adventure.drive(scanner.nextDouble());
         System.out.println("Required for travel (liters)");
-        System.out.println(fuel.needFuel() + "l");
+        System.out.println(adventure.needFuel() + "l");
         System.out.println("Enter the fuel price (EUR)");
-        fuel.fuelPrice(scanner.nextDouble());
-        System.out.println("Adventure price");
-        System.out.println(fuel.adventurePrice() + " EUR");
+        adventure.fuelPrice(scanner.nextDouble());
+        System.out.println("Adventure price:");
+        System.out.println(adventure.adventurePrice() + " EUR");
         //Task 2
         System.out.println("The Car");
         Car car = new Car(5, 50);

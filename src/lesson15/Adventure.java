@@ -4,7 +4,7 @@ package lesson15;
  * @author Boiko Yaroslav
  * @version 19.02.24
  */
-public class Fuel {
+public class Adventure {
     String brand;
     String model;
     String color;
@@ -12,7 +12,7 @@ public class Fuel {
    double distance;
    double price;
 
-   public Fuel(String brand, String model, String color) {
+   public Adventure(String brand, String model, String color) {
       this.brand = brand;
       this.model = model;
       this.color = color;
