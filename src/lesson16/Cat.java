@@ -1,5 +1,9 @@
 package lesson16;
-
+/**
+ * AIT-TR, Java Basic, Cohort42.1, Lesson #16
+ * @author Boiko Yaroslav
+ * @version 19.02.24
+ */
 public class Cat {
     int maxVolume;
     int realVolume;
@@ -16,5 +20,4 @@ public class Cat {
         realVolume += food;
         plate.feeding(food);
     }
-
 }
