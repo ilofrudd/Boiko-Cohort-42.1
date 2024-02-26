@@ -18,7 +18,7 @@ public class Car {
             fuel = maxVolume - realVolume;
         }
         realVolume += fuel;
-        petrolStation.consumption(fuel);
+        petrolStation.consumptionFuel(fuel);
     }
 
 }

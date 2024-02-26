@@ -12,18 +12,24 @@ public class PetrolStation {
         this.capacity = capacity;
         this.fuel = 0;
     }
+
     public void add(int fuel) {
         if (this.fuel + fuel <= capacity) {
             this.fuel += fuel;
-        }else {
+        } else {
             System.out.println("Cannot add fuel, capacity exceeded");
         }
 
     }
+
     public int amountFuel() {
         return fuel;
     }
-    public void consumption(int fuel) {
+
+    public void consumptionFuel(int fuel) {
+        if (this.fuel - fuel < 0) {
+            return;
+        }
         this.fuel -= fuel;
     }
 }

@@ -1,5 +1,7 @@
 package lesson12;
 
+import extend.Stack;
+
 import java.util.Random;
 import java.util.Arrays;
 /**
