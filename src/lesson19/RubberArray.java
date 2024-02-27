@@ -5,12 +5,12 @@ public class RubberArray {
     private final double RESIZE_K = 1.5;
     private final int INIT_DATA_SIZE = 10;
     private int[] data;
-    private int lenght;
+    private int length;
 
 
     public RubberArray() {
         data = new int[INIT_DATA_SIZE];
-        lenght = 0;
+        length = 0;
     }
 
     public int get(int idx) {
@@ -18,7 +18,7 @@ public class RubberArray {
     }
 
     public void add(int value) {
-        if (lenght == data.length) {
+        if (length == data.length) {
             int[] newData = new int[(int) (data.length * RESIZE_K)];
             for (int i = 0; i < data.length; i++) {
                 newData[i] = data[i];
@@ -27,31 +27,50 @@ public class RubberArray {
             data = newData;
         }
         // add value
-        data[lenght] = value;
-        lenght++;
+        data[length] = value;
+        length++;
     }
 
     public void add(int value, int idx) {
-        // TODO implement
+        if (idx < 0 || idx > length) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+        if (length == data.length) {
+            int[] newData = new int[(int) (data.length * RESIZE_K)];
+            for (int i = 0; i < idx; i++) {
+                newData[i] = data[i];
+            }
+            newData[idx] = value;
+            for (int i = idx + 1; i <= length; i++) {
+                newData[i] = data[i - 1];
+            }
+            data = newData;
+        } else {
+            for (int i = length; i > idx; i--) {
+                data[i] = data[i - 1];
+            }
+            data[idx] = value;
+        }
+        length++;
     }
 
     public void remove(int idx) {
         for (int i = idx; i <data.length - 1; i++) {
             data[i] = data[i + 1];
         }
-        lenght--;
+        length--;
     }
 
     @Override
     public String toString() {
-        // TODO use StringBuilder instead of String
-        String str = "[";
-        for (int i = 0; i < lenght; i++) {
-            str += String.valueOf(data[i]);
-            if (i < lenght - 1) {
-                str += ", ";
+        StringBuilder str = new StringBuilder("[");
+        for (int i = 0; i < length; i++) {
+            str.append(data[i]);
+            if (i < length - 1) {
+                str.append(", ");
             }
         }
-        return str + "]";
+        str.append("]");
+        return str.toString();
     }
 }
