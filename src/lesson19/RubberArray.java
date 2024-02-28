@@ -61,6 +61,19 @@ public class RubberArray {
         length--;
     }
 
+    public boolean contains(int value) {
+        return indexOF(value) != -1;
+    }
+
+    public int indexOF(int value) {
+        for (int i = 0; i < length; i++) {
+            if (data[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public String toString() {
         StringBuilder str = new StringBuilder("[");

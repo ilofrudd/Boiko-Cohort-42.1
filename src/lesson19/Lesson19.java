@@ -12,6 +12,8 @@ public class Lesson19 {
         ra.add(11);
         System.out.println(ra);
         ra.add(17, 3);
+        System.out.println(ra.contains(11));
+        System.out.println(ra.indexOF(-4));
         System.out.println(ra);
         System.out.println(ra.get(2));
         ra.remove(2);
