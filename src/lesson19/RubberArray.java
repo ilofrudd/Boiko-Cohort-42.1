@@ -32,9 +32,6 @@ public class RubberArray {
     }
 
     public void add(int value, int idx) {
-        if (idx < 0 || idx > length) {
-            throw new IndexOutOfBoundsException("Index out of bounds");
-        }
         if (length == data.length) {
             int[] newData = new int[(int) (data.length * RESIZE_K)];
             for (int i = 0; i < idx; i++) {
