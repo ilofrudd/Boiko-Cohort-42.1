@@ -5,8 +5,8 @@ import java.util.Scanner;
 /**
  * AIT-TR, cohort 42.1, Java Basic, hw #10 ext
  *
- * @author Boiko Yaroslav
- * @version 28.02.2024
+ * @author Sergey Iryupin
+ * @version 8,23,26,28-Feb-24
  */
 public class Interpreter {
 
@@ -29,7 +29,14 @@ public class Interpreter {
                     System.out.println("Exit from interpreter.");
                     break;
                 default:
-                    variables.assignValue(line);
+                    // to interpreter line like: a = 123
+                    tokens = line.split("=");
+                    // if right side from '=' is not empty
+                    if (tokens.length == 1) {
+                        System.out.println("Error: invalid command");
+                        break;
+                    }
+                    variables.setValue(tokens[0].trim(), tokens[1].trim());
             }
         } while (!line.equals("exit"));
     }
