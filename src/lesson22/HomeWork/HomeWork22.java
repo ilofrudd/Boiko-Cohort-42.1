@@ -1,5 +1,9 @@
 package lesson22.HomeWork;
-
+/**
+ * AIT-TR, Java Basic, Cohort42.1, HW #22
+ * @author Boiko Yaroslav
+ * @version 06.03.24
+ */
 public class HomeWork22 {
     public static void main(String[] args) {
         Animal animal = new Animal("Generic Animal", 5);
