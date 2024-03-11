@@ -1,4 +1,4 @@
-package lesson22.HomeWork;
+package lesson22.homeWork;
 
 public class Animal {
     protected String name;

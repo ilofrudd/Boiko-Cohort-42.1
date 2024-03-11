@@ -1,7 +1,15 @@
 package lesson22;
 
 public class TriangleRectangle extends Shape2D {
-    int  c;
+
+    @Override
+    public boolean equals(Object obj) {
+        return a == ((TriangleRectangle) obj).a && b ==((TriangleRectangle) obj).b;
+    }
+
+    public TriangleRectangle(int a, int b) {
+        super(a, b);
+    }
 
     @Override
     public double perimeter() {
