@@ -10,10 +10,10 @@ public class HomeWork25 {
         Human human = new Human();
         human.run();
 
-        AmateurAthlete amateur = new AmateurAthlete();
+        Human amateur = new AmateurAthlete();
         amateur.run();
 
-        ProfessionalAthlete pro = new ProfessionalAthlete();
+        Human pro = new ProfessionalAthlete();
         pro.run();
         System.out.println("__TASK2__");
         Vehicle[] vehicles = new Vehicle[3];
