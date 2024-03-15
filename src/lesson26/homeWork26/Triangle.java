@@ -1,24 +1,24 @@
 package lesson26.homeWork26;
 
 public class Triangle extends Shape{
-    private double side1;
-    private double side2;
-    private double side3;
+    private double s1;
+    private double s2;
+    private double s3;
 
-    public Triangle(double side1, double side2, double side3) {
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+    public Triangle(double s1, double s2, double s3) {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
     }
 
     @Override
     protected double calculateArea() {
-        double s = (side1 + side2 + side3) / 2; // half perimeter
-        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+        double s = calculatePerimeter() / 2; // half perimeter
+        return Math.sqrt(s * (s - s1) * (s - s2) * (s - s3));
     }
 
     @Override
     protected double calculatePerimeter() {
-        return side1 + side2 + side3;
+        return s1 + s2 + s3;
     }
 }
