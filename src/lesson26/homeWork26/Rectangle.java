@@ -10,12 +10,12 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    protected double calculateArea() {
+    public double calculateArea() {
         return length * width;
     }
 
     @Override
-    protected double calculatePerimeter() {
+    public double calculatePerimeter() {
         return  2 * (length + width);
     }
 }

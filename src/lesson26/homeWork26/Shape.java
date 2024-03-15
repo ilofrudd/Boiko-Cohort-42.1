@@ -1,6 +1,6 @@
 package lesson26.homeWork26;
 
 public abstract class Shape {
-    protected abstract double calculateArea();
-    protected abstract double calculatePerimeter();
+    public abstract double calculateArea();
+    public abstract double calculatePerimeter();
 }
