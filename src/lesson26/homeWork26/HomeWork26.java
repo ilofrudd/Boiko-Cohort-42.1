@@ -1,5 +1,9 @@
 package lesson26.homeWork26;
-
+/**
+ * AIT-TR, cohort 42.1, Java Basic, HW #26
+ * @author Boiko Yaroslav
+ * @version 15.03.24
+ */
 public class HomeWork26 {
     public static void main(String[] args) {
         Shape[] shapes = new Shape[3];
