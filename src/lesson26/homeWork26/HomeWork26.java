@@ -9,7 +9,7 @@ public class HomeWork26 {
         Shape[] shapes = new Shape[3];
         shapes[0] = new Circle(8);
         shapes[1] = new Rectangle(13, 9);
-        shapes[2] = new Triangle(7, 10, 6);
+        shapes[2] = new Triangle(6, 6, 6);
 
         double totalArea = 0;
         double totalPerimeter = 0;
