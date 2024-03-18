@@ -12,10 +12,16 @@ public class HomeWork27 {
         BankAccount bankAccount = new BankAccount(1000);
         ElectronicWallet electronicWallet = new ElectronicWallet(500);
 
+        bankAccount.checkBalance();
         bankAccount.transferMoney(313, "Recipient's Bank Account");
         bankAccount.checkBalance();
+        bankAccount.withdrawMoney(105);
+        bankAccount.checkBalance();
 
+        electronicWallet.checkBalance();
         electronicWallet.transferMoney(125, "Recipient's Electronic Wallet");
+        electronicWallet.checkBalance();
+        electronicWallet.withdrawMoney(215);
         electronicWallet.checkBalance();
 
         System.out.println("___Task 2___");

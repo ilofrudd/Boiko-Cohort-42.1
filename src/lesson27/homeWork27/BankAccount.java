@@ -14,7 +14,6 @@ public class BankAccount implements PaymentSystem {
             return;
         }
         balance -= amount;
-        System.out.println("Transferred EUR" + amount + " to " + recipient);
     }
 
     @Override
@@ -24,7 +23,6 @@ public class BankAccount implements PaymentSystem {
             return;
         }
         balance -= amount;
-        System.out.println("Withdrawn EUR" + amount + " from bank account.");
     }
 
     @Override

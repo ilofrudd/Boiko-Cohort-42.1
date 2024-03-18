@@ -14,7 +14,6 @@ public class ElectronicWallet implements PaymentSystem{
             return;
         }
         balance -= amount;
-        System.out.println("Transferred EUR" + amount + " to " + recipient);
     }
 
     @Override
