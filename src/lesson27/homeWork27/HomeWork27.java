@@ -1,4 +1,4 @@
-package lesson27.homeWork;
+package lesson27.homeWork27;
 /**
  * AIT-TR, cohort 42.1, Java Basic, HW #27
  * @author Boiko Yaroslav

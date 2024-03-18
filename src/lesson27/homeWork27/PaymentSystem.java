@@ -1,4 +1,4 @@
-package lesson27.homeWork;
+package lesson27.homeWork27;
 
 public interface PaymentSystem {
     void transferMoney(double amount, String recipient);
