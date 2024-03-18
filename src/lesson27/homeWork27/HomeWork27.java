@@ -13,13 +13,13 @@ public class HomeWork27 {
         ElectronicWallet electronicWallet = new ElectronicWallet(500);
 
         bankAccount.checkBalance();
-        bankAccount.transferMoney(313, "Recipient's Bank Account");
+        bankAccount.transferMoney(313);
         bankAccount.checkBalance();
         bankAccount.withdrawMoney(105);
         bankAccount.checkBalance();
 
         electronicWallet.checkBalance();
-        electronicWallet.transferMoney(125, "Recipient's Electronic Wallet");
+        electronicWallet.transferMoney(125);
         electronicWallet.checkBalance();
         electronicWallet.withdrawMoney(215);
         electronicWallet.checkBalance();

@@ -8,7 +8,7 @@ public class ElectronicWallet implements PaymentSystem{
     }
 
     @Override
-    public void transferMoney(double amount, String recipient) {
+    public void transferMoney(double amount) {
         if (amount <= 0 || amount > balance) {
             System.out.println("Invalid transfer amount or insufficient funds.");
             return;
