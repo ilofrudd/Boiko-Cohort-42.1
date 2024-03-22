@@ -8,5 +8,4 @@ public class ToWarehouse extends SampleDocument{
     public void toWarehouse(Warehouse warehouse) {
         warehouse.addAll(products);
     }
-
 }
