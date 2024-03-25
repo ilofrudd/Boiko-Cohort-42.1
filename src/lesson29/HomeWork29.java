@@ -7,7 +7,6 @@ package lesson29;
 public class HomeWork29 {
     public static void main(String[] args) {
         RubberList rubberList = new RubberList();
-        rubberList.add(23, 2);
         rubberList.add(7);
         rubberList.add(4);
         rubberList.add(12);

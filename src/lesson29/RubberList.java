@@ -27,11 +27,7 @@ public class RubberList {
     }
 
     public boolean contains(int value) {
-        Node node = findByValue(value);
-        if (node != null) {
-            return true;
-        }
-        return false;
+        return indexOf(value) != -1;
     }
 
     public int indexOf(int value) {
@@ -57,7 +53,7 @@ public class RubberList {
     }
 
     public void add(int value, int idx) {
-        //TODO
+       //TODO
     }
 
     public void remove(int idx) {
