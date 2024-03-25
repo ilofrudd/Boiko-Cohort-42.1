@@ -7,6 +7,8 @@ public abstract class SampleDocument {
     protected int id;
     protected List<ProductAndCount> products;
 
+    protected Manager manager;
+
     public SampleDocument(int id) {
         this.id = id;
         this.products = new ArrayList<>();
