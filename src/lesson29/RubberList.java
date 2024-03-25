@@ -4,6 +4,7 @@ public class RubberList {
     private int size = 0;
     private Node first;
     private Node last;
+    private int findIndex;
 
     public Node getFirst() {
         return first;
@@ -18,20 +19,27 @@ public class RubberList {
     }
 
     public Integer get(int idx) {
-        if (idx == 0) {
-            return first.item;
-        } else {
-            int index = 0;
-            Node cursor = first;
-            while (cursor.next != null) {
-                cursor = cursor.next;
-                index++;
-                if (idx == index) {
-                    return cursor.item;
-                }
-            }
+        Node findNode = findByIndex(idx);
+        if (findNode != null) {
+            return findNode.item;
         }
         return null;
+    }
+
+    public boolean contains(int value) {
+        Node node = findByValue(value);
+        if (node != null) {
+            return true;
+        }
+        return false;
+    }
+
+    public int indexOf(int value) {
+        Node node = findByValue(value);
+        if (node != null) {
+            return findIndex;
+        }
+        return -1;
     }
 
     public void add(int value) {
@@ -49,24 +57,11 @@ public class RubberList {
     }
 
     public void add(int value, int idx) {
-        Node current = first;
-        while (current != null) {
-            if (current.item == value) {
-                Node newNode = new Node(current, value, current.next);
-                current.next = newNode;
-                if (newNode.next == null) {
-                    last = newNode;
-                } else {
-                    newNode.next.prev = newNode;
-                }
-                size++;
-                return;
-            }
-            current = current.next;
-        }
+        //TODO
     }
 
     public void remove(int idx) {
+        // remove first element;
         if (idx == 0) {
             if (size == 1) {
                 first = null;
@@ -76,82 +71,101 @@ public class RubberList {
                 first = newFirst;
             }
             size--;
+            // remove last element
+        } else if (idx == size - 1) {
+            Node newLast = last.prev;
+            newLast.next = null;
+            last.prev = null;
+            last = newLast;
+            size--;
+            // remove mid element
         } else {
-            int index = 0;
-            Node cursor = first;
-            while (cursor.next != null) {
-                cursor = cursor.next;
-                index++;
-                if (idx == index) {
-                    Node left = cursor.prev;
-                    Node right = cursor.next;
-                    left.next = right;
-                    if (right != null) {
-                        right.prev = left;
-                    }
-                    cursor.prev = null;
-                    cursor.next = null;
-                    size--;
+            Node findNode = findByIndex(idx);
+            if (findNode == null) {
+                return;
+            }
+            Node nodeA = findNode.prev;
+            Node nodeC = findNode.next;
+            nodeA.next = nodeC;
+            nodeC.prev = nodeA;
+            findNode.next = null;
+            findNode.prev = null;
+            size--;
+        }
+    }
+
+        @Override
+        public String toString () {
+            StringBuilder sb = new StringBuilder("[");
+            if (size > 0) {
+                sb.append(first.item);
+            }
+            if (size > 1) {
+                Node cursor = first;
+                while (cursor.next != null) {
+                    cursor = cursor.next;
+                    sb.append(", ").append(cursor.item);
                 }
             }
+            return sb.append("]").toString();
         }
-    }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder("[");
-        if (size > 0) {
-            sb.append(first.item);
-        }
-        if (size > 1) {
+        private Node findByValue (int value) {
+            if (size == 0) {
+                return null;
+            }
+            findIndex = 0;
+            if (first.item == value) {
+                return first;
+            }
             Node cursor = first;
             while (cursor.next != null) {
                 cursor = cursor.next;
-                sb.append(", ").append(cursor.item);
+                findIndex++;
+                if (cursor.item == findIndex) {
+                    return cursor;
+                }
             }
+            return null;
         }
-        return sb.append("]").toString();
-    }
 
-    public boolean contains(int value) {
-        Node current = first;
-        while (current != null) {
-            if (current.item == value) {
-                return true;
+        private Node findByIndex ( int idx){
+            if (idx == 0) {
+                return first;
             }
-            current = current.next;
-        }
-        return false;
-    }
-    public int indexOf(int value) {
-        int index = 0;
-        Node current = first;
-        while (current != null) {
-            if (current.item == value) {
-                return index;
+            if (idx == size - 1) {
+                return last;
             }
-            current = current.next;
-            index++;
+            findIndex = 0;
+            Node cursor = first;
+            while (cursor.next != null) {
+                cursor = cursor.next;
+                findIndex++;
+                if (idx == findIndex) {
+                    return cursor;
+                }
+            }
+            return null;
         }
-        return -1;
-    }
 
-    private static class Node {
-        Node prev;
-        int item;
-        Node next;
-        public Node(Node prev, int item, Node next) {
-            this.prev = prev;
-            this.item = item;
-            this.next = next;
+        private static class Node {
+            Node prev;
+            int item;
+            Node next;
+
+            public Node(Node prev, int item, Node next) {
+                this.prev = prev;
+                this.item = item;
+                this.next = next;
+            }
+
+            @Override
+            public String toString() {
+                return "Node{" +
+                        "prev=" + (prev == null ? null : "<-link") +
+                        ", item=" + item +
+                        ", next=" + (next == null ? null : "link->") +
+                        '}';
+            }
         }
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "prev=" + (prev == null? null : "<-link") +
-                    ", item=" + item +
-                    ", next=" + (next == null? null : "link->") +
-                    '}';
-        }
-    }
 }

@@ -1,5 +1,9 @@
 package lesson29;
-
+/**
+ * AIT-TR, cohort 42.1, Java Basic, Lesson #29
+ * @author Boiko Yaroslav
+ * @version 22.03.24
+ */
 public class Lesson29 {
     public static void main(String[] args) {
     RubberList rubberList = new RubberList();
