@@ -16,7 +16,7 @@ import java.util.Random;
 /**
  * AIT-TR, cohort 42.1, Java Basic, Lesson #31
  * @author Boiko Yaroslav
- * @version 25.03.24
+ * @version 27.03.24
  */
 public class HomeWork31 extends JFrame {
     private Random random;
@@ -107,7 +107,6 @@ public class HomeWork31 extends JFrame {
                     g.fillRect(x, y, width, height);
                     g.setColor(Color.black);
                     g.drawRect(x, y, width, height);
-
                 }
             }
         }
