@@ -59,12 +59,9 @@ public class HomeWork31 extends JFrame {
             }
         });
 
-        btnRectangles.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                shapeForm = 2;
-                canvas.repaint();
-            }
+        btnRectangles.addActionListener(e -> {
+            shapeForm = 2;
+            canvas.repaint();
         });
 
         btnExit.addActionListener(e -> System.exit(0));
