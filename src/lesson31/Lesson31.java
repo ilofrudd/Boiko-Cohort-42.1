@@ -23,7 +23,7 @@ public class Lesson31 extends JFrame {
     private final Color[] COLORS = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan, Color.orange, Color.lightGray};
     private int CIRCLE_COUNT = 100;
     public static void main(String[] args) {
-        new Lesson31();
+        new HomeWork31();
     }
 
 
