@@ -21,7 +21,7 @@ import java.util.Random;
 public class HomeWork31 extends JFrame {
     private Random random;
     private final Color[] COLORS = {Color.red, Color.green, Color.blue, Color.yellow, Color.magenta, Color.cyan, Color.orange, Color.lightGray};
-    private int SHAPE_COUNT = 100;
+    private final int SHAPE_COUNT = 100;
     private int shapeForm;
     public static void main(String[] args) {
         new HomeWork31();
@@ -50,6 +50,7 @@ public class HomeWork31 extends JFrame {
 
         JButton btnCircles = new JButton("Circles");
         JButton btnRectangles = new JButton("Rectangles");
+        JButton btnTriangles = new JButton("Triangles");
         JButton btnExit = new JButton("Exit");
         btnCircles.addActionListener(new ActionListener() {
             @Override
@@ -64,12 +65,18 @@ public class HomeWork31 extends JFrame {
             canvas.repaint();
         });
 
+        btnTriangles.addActionListener(e -> {
+            shapeForm = 3;
+            canvas.repaint();
+        });
+
         btnExit.addActionListener(e -> System.exit(0));
 
         Panel btnPanel = new Panel();
         btnPanel.setLayout(new GridLayout());
         btnPanel.add(btnCircles);
         btnPanel.add(btnRectangles);
+        btnPanel.add(btnTriangles);
         btnPanel.add(btnExit);
 
 
@@ -104,6 +111,21 @@ public class HomeWork31 extends JFrame {
                     g.fillRect(x, y, width, height);
                     g.setColor(Color.black);
                     g.drawRect(x, y, width, height);
+                }
+                if (shapeForm == 3) {
+                        int length = random.nextInt(20) + 80;
+                        int h = (int) (length * Math.sqrt(3) / 2);
+                        int x1 = random.nextInt(getWidth() - length);
+                        int y1 = random.nextInt(getHeight() - length);
+                        int x2 = x1 + length;
+                        int y2 = y1;
+                        int x3 = x2 / 2;
+                        int y3 = y2 + h;
+                        Color color = COLORS[random.nextInt(COLORS.length)];
+                        g.setColor(color);
+                        g.drawLine(x1, y1, x2, y2);
+                        g.drawLine(x1, y1, x3, y3);
+                        g.drawLine(x3, y3, x2, y2);
                 }
             }
         }
